@@ -1,3 +1,7 @@
+(function () {
+    'use strict';
+}());
+
 function FeatureSwitches(customer_key, environment_key, default_enabled) {
     this.customer_key = customer_key;
     this.environment_key = environment_key;
@@ -14,14 +18,14 @@ FeatureSwitches.prototype.is_enabled = function(feature_key, user_identifier, ca
 
     var query = '?feature_key=' + encodeURIComponent(feature_key);
 
-    if (user_identifier != null) {
+    if (user_identifier !== null) {
         query += '&user_identifier=' + encodeURIComponent(user_identifier);
     }
 
     xhr.open('GET', this.api + endpoint + query, true);
     xhr.setRequestHeader('Authorization', this.customer_key + ':' + this.environment_key);
     xhr.onreadystatechange = function() {
-        if (xhr.readyState == 4 && xhr.status == 200) {
+        if (xhr.readyState === 4 && xhr.status === 200) {
             var res = JSON.parse(xhr.responseText);
             if (res.success) {
                 callback(null, res.enabled);
@@ -31,4 +35,4 @@ FeatureSwitches.prototype.is_enabled = function(feature_key, user_identifier, ca
         }
     };
     xhr.send(null);
-}
+};

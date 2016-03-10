@@ -1,0 +1,32 @@
+{
+  "name": "featureswitches-js",
+  "version": "0.8.0",
+  "description": "JavaScript Client for FeatureSwitches.com feature flags as a service",
+  "main": "./src",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/featureswitches/featureswitches-js.git"
+  },
+  "keywords": [
+    "featureswitches",
+    "client",
+    "feature flag"
+  ],
+  "author": "Joel Weirauch <joel@featureswitches.com> (https://featureswitches.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/featureswitches/featureswitches-js/issues"
+  },
+  "homepage": "https://github.com/featureswitches/fetureswitches-js",
+  "dependencies": {},
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.3",
+    "jshint": "^2.9.1"
+  }
+}
