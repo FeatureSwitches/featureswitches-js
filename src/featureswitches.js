@@ -7,7 +7,7 @@ function FeatureSwitches(customer_key, environment_key, default_enabled) {
     this.environment_key = environment_key;
 
     this.default_enabled = default_enabled || false;
-    this.api = 'http://localhost:8000/v1/';
+    this.api = 'https://api.featureswitches.com/v1/';
 }
 
 FeatureSwitches.prototype.is_enabled = function(feature_key, user_identifier, callback) {
